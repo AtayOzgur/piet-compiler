@@ -1,0 +1,11 @@
+when green flag clicked
+forever
+    if <key [space v] pressed?> then
+        broadcast compile
+        wait until <<not <key [space v] pressed?> and <not <mouse down?>>
+    end
+end
+when I receive compile
+set [compiled code v] to "Your compiled Piet code here"
+show variable [compiled code v]
+when I receive compile
