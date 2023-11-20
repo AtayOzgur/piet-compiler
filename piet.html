@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piet Compiler</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>Piet Compiler</h1>
+    <input type="file" id="inputImage" accept="image/*">
+    <button onclick="compilePiet()">Compile</button>
+    <div id="output"></div>
+
+    <script>
+        function compilePiet() {
+            const inputImage = document.getElementById('inputImage').files[0];
+
+            if (inputImage) {
+                // Use a library like `piet-js` for Piet image processing
+                // Example: https://github.com/felko/piet-js
+                // Process the Piet image and generate the output code
+
+                // Display the output code
+                const outputDiv = document.getElementById('output');
+                outputDiv.innerText = "Compiled Piet code:\n\n" + "Your compiled code here";
+            } else {
+                alert("Please select an image file.");
+            }
+        }
+    </script>
+</body>
+</html>
